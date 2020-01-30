@@ -24,14 +24,30 @@ namespace BinarySearchTree
                 {
                     if (data.CompareTo(current.data) <= 0)
                     {
-                        current = current.leftChild;
+                        if (current.leftChild != null)
+                        {
+                            current = current.leftChild;
+                        }
+                        else
+                        {
+                            current.leftChild = node;
+                            break;
+                        }
                     }
                     else
                     {
-                        current = current.rightChild;
+                        if (current.rightChild != null)
+                        {
+                            current = current.rightChild;
+                        }
+                        else
+                        {
+                            current.rightChild = node;
+                            break;
+                        }
                     }
                 }
-                current = node;               
+               // current = node;               
             }           
         }
         public Node<T> Search(T data)

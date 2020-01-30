@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BinarySearchTree
 {
-    class Node<T> where T : IComparable
+    class Node<T>
     {
         public T data;
         public Node<T> leftChild;
@@ -16,6 +16,8 @@ namespace BinarySearchTree
         {
             this.data = data;
         }
+
+
 
     }
 }
