@@ -47,18 +47,17 @@ namespace BinarySearchTree
                         }
                     }
                 }
-               // current = node;               
+                //current = node;               
             }           
         }
-        public Node<T> Search(T data)
+        public bool Search(T data)
         {
-            Node<T> current = root;
-            
+            Node<T> current = root;            
             while(current != null)
             {
                 if (current.data.Equals(data))
                 {
-                    return current;
+                    return true;
                 }
                 else if(data.CompareTo(current.data) < 0)
                 {
@@ -69,7 +68,7 @@ namespace BinarySearchTree
                     current = current.rightChild;
                 }
             }
-            return null;
+            return false;
         }
 
         
